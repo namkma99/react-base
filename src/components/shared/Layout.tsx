@@ -9,6 +9,7 @@ import { useAppStore } from '@/stores/use-app-store';
 export const Layout = () => {
   const theme = useAppStore((state) => state.theme);
   const toggleTheme = useAppStore((state) => state.toggleTheme);
+  const resumeUrl = `${import.meta.env.BASE_URL}Nguyen-Duc-Nam-FRONEND_DEV.pdf`;
 
   return (
     <div className="min-h-screen bg-[#efe5d7] text-foreground transition-colors duration-300">
@@ -59,7 +60,7 @@ export const Layout = () => {
                 <SunMedium className="h-4 w-4" />
               )}
             </Button>
-            <a href="/Nguyen-Duc-Nam-FRONEND_DEV.pdf" target="_blank" rel="noreferrer">
+            <a href={resumeUrl} target="_blank" rel="noreferrer">
               <Button className="hidden rounded-full bg-[#183a3d] px-5 text-[#f8f1e7] hover:bg-[#183a3d]/92 sm:inline-flex">
                 Resume
               </Button>

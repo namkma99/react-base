@@ -15,6 +15,8 @@ const sectionTitleClass =
   'text-xs font-semibold uppercase tracking-[0.28em] text-[color:var(--portfolio-accent)]';
 
 export const PortfolioPage = () => {
+  const resumeUrl = `${import.meta.env.BASE_URL}Nguyen-Duc-Nam-FRONEND_DEV.pdf`;
+
   return (
     <div className="relative overflow-hidden rounded-[2rem] bg-[var(--portfolio-surface)] text-[var(--portfolio-ink)] shadow-[0_32px_120px_rgba(18,38,40,0.14)] ring-1 ring-black/5">
       <div className="absolute inset-x-0 top-0 h-[28rem] bg-[radial-gradient(circle_at_top_left,_rgba(246,151,95,0.24),_transparent_34%),radial-gradient(circle_at_80%_20%,_rgba(56,122,118,0.22),_transparent_28%),linear-gradient(180deg,_rgba(250,244,235,0.96),_rgba(244,236,225,0.92))]" />
@@ -53,7 +55,7 @@ export const PortfolioPage = () => {
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </a>
-              <a href="/Nguyen-Duc-Nam-FRONEND_DEV.pdf" target="_blank" rel="noreferrer">
+              <a href={resumeUrl} target="_blank" rel="noreferrer">
                 <Button
                   variant="outline"
                   className="h-11 rounded-full border-[var(--portfolio-line)] bg-white/70 px-6 backdrop-blur-sm"
