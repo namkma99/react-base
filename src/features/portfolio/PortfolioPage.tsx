@@ -173,7 +173,7 @@ export const PortfolioPage = () => {
             </p>
           </div>
           <div>
-            <p className="text-4xl font-semibold tracking-[-0.06em]">3</p>
+            <p className="text-4xl font-semibold tracking-[-0.06em]">4</p>
             <p className="mt-2 text-sm text-[var(--portfolio-muted)]">
               Product sectors with hands-on delivery
             </p>
@@ -349,14 +349,22 @@ export const PortfolioPage = () => {
             </a>
             <a
               className="block transition-colors hover:text-[var(--portfolio-ink)]"
-              href={profile.website}
+              href={profile.github}
               target="_blank"
               rel="noreferrer"
             >
-              Facebook profile
+              GitHub profile
             </a>
             <p>{profile.location}</p>
           </div>
+          <a
+            className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[var(--portfolio-ink)] transition-opacity hover:opacity-75"
+            href={profile.github}
+            target="_blank"
+            rel="noreferrer"
+          >
+            View GitHub
+          </a>
         </div>
       </section>
     </div>

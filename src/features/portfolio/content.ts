@@ -2,37 +2,37 @@ export const profile = {
   name: 'Nguyen Duc Nam',
   role: 'Frontend Tech Lead',
   summary:
-    'I design and ship scalable web products for fast-moving teams, with a focus on maintainable frontend architecture, performance, and delivery discipline.',
+    'Frontend Tech Lead with 4+ years of experience building scalable web products across fintech, healthcare, and proptech, specializing in frontend architecture, performance optimization, and international product delivery.',
   intro:
-    'Over 4 years building production interfaces across fintech, proptech, and healthcare for Japan, Singapore, and Australia.',
+    'Trusted by cross-border teams to modernize legacy systems, improve delivery quality, and lead frontend execution for products serving Japan, Singapore, and Australia.',
   email: 'namkma99@gmail.com',
   phone: '0373690243',
-  website: 'https://www.facebook.com/nguyenducnam1999',
+  github: 'https://github.com/namkma99',
   location: 'Hanoi, Vietnam',
   yearsOfExperience: '4+',
-  specialties: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'AWS'],
+  specialties: ['React', 'Next.js', 'TypeScript', 'System Design', 'AWS'],
 };
 
 export const highlights = [
   {
     label: 'Current role',
     value: 'Frontend Tech Lead',
-    note: 'Rikkeisoft, Dec 2023 to now',
+    note: 'Leading architecture and delivery at Rikkeisoft since Dec 2023',
   },
   {
     label: 'Product domains',
     value: 'Fintech, Proptech, Healthcare',
-    note: 'Delivery across regulated and complex workflows',
+    note: 'Hands-on delivery across regulated and workflow-heavy systems',
   },
   {
     label: 'Regional markets',
     value: 'Japan, Singapore, Australia',
-    note: 'Built for international teams and clients',
+    note: 'Delivered products for international stakeholders and users',
   },
   {
     label: 'Leadership',
-    value: 'Architecture, reviews, mentoring',
-    note: 'From planning and estimation to execution quality',
+    value: 'Team leadership and architecture ownership',
+    note: 'Led engineers, code quality, estimation, and delivery execution',
   },
 ];
 
@@ -42,10 +42,10 @@ export const experiences = [
     period: '12/2023 - Now',
     title: 'Frontend Tech Lead',
     points: [
-      'Led frontend delivery for large-scale products serving Japanese and Australian markets.',
-      'Designed modular frontend structures that improved maintainability and long-term scalability.',
-      'Established code review standards and technical debt reduction practices that improved delivery quality.',
-      'Worked closely with PMs on sprint planning, estimation, and task breakdown to keep teams shipping on time.',
+      'Spearheaded frontend delivery for large-scale products serving Japanese and Australian markets, aligning architecture decisions with product timelines and delivery targets.',
+      'Designed modular frontend foundations that improved maintainability, reduced refactor friction, and created a clearer path for long-term scale.',
+      'Led a team of engineers through code reviews, technical mentoring, and implementation guidance, raising code quality and delivery consistency across the frontend stream.',
+      'Drove sprint planning, technical estimation, and task breakdown with PMs and stakeholders to keep execution predictable and on time.',
     ],
   },
   {
@@ -53,10 +53,10 @@ export const experiences = [
     period: '06/2020 - 11/2023',
     title: 'Web Developer',
     points: [
-      'Built core product features for diverse web platforms targeting Singapore and Japan.',
-      'Created a reusable UI design system that accelerated development velocity by roughly 30%.',
-      'Improved application performance and integrated complex RESTful and GraphQL APIs.',
-      'Mentored junior engineers and contributed to internal technical workshops.',
+      'Delivered production frontend features for client platforms in Singapore and Japan across healthcare, proptech, ESG, and CMS products.',
+      'Designed and implemented a reusable UI design system that improved development speed by roughly 30% and increased cross-project consistency.',
+      'Resolved performance bottlenecks and integrated complex REST and GraphQL APIs, improving responsiveness across data-heavy user flows.',
+      'Mentored junior engineers, contributed to technical workshops, and supported teams of 3 to 6 engineers in adopting stronger frontend practices.',
     ],
   },
 ];
@@ -67,9 +67,9 @@ export const featuredProject = {
   scope: 'Frontend Tech Lead · Team size 15 · Japan',
   stack: ['Next.js', 'Tailwind CSS', 'Python', 'PostgreSQL', 'AWS'],
   summary:
-    'Leading modernization of a live production application with a focus on architecture, rendering speed, and search visibility.',
+    'Owning the frontend modernization of a live production platform, balancing legacy migration, rendering performance, and SEO-critical user journeys for a 15-person team.',
   achievement:
-    'Refactored legacy components into a modern structure that significantly improved SEO and runtime performance.',
+    'Refactored legacy components into a modern Next.js structure, improving SEO readiness, rendering speed, and maintainability for continued product growth.',
 };
 
 export const skills = [
