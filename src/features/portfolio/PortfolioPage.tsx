@@ -9,7 +9,6 @@ import {
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { TodoList } from '@/features/todo';
 import { education, experiences, featuredProject, highlights, profile, skills } from './content';
 
 const sectionTitleClass =
@@ -19,9 +18,9 @@ export const PortfolioPage = () => {
   const resumeUrl = `${import.meta.env.BASE_URL}Nguyen-Duc-Nam-FRONEND_DEV.pdf`;
 
   return (
-    <div className="relative overflow-hidden rounded-[2rem] bg-[var(--portfolio-surface)] text-[var(--portfolio-ink)] shadow-[0_32px_120px_rgba(18,38,40,0.14)] ring-1 ring-black/5">
-      <div className="absolute inset-x-0 top-0 h-[28rem] bg-[radial-gradient(circle_at_top_left,_rgba(246,151,95,0.24),_transparent_34%),radial-gradient(circle_at_80%_20%,_rgba(56,122,118,0.22),_transparent_28%),linear-gradient(180deg,_rgba(250,244,235,0.96),_rgba(244,236,225,0.92))]" />
-      <div className="absolute inset-y-0 right-0 hidden w-[28rem] bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.62),_transparent_55%)] lg:block" />
+    <div className="relative overflow-hidden rounded-[2rem] bg-[var(--portfolio-surface)] text-[var(--portfolio-ink)] shadow-[0_32px_120px_var(--portfolio-shadow)] ring-1 ring-[var(--portfolio-ring)]">
+      <div className="absolute inset-x-0 top-0 h-[28rem] bg-[var(--portfolio-hero)]" />
+      <div className="absolute inset-y-0 right-0 hidden w-[28rem] bg-[var(--portfolio-side-glow)] lg:block" />
 
       <section
         id="top"
@@ -59,7 +58,7 @@ export const PortfolioPage = () => {
               <a href={resumeUrl} target="_blank" rel="noreferrer">
                 <Button
                   variant="outline"
-                  className="h-11 rounded-full border-[var(--portfolio-line)] bg-white/70 px-6 backdrop-blur-sm"
+                  className="h-11 rounded-full border-[var(--portfolio-line)] bg-[var(--portfolio-card)] px-6 text-[var(--portfolio-ink)] backdrop-blur-sm hover:bg-[var(--portfolio-soft)]"
                 >
                   Download CV
                   <Download className="h-4 w-4" />
@@ -111,7 +110,7 @@ export const PortfolioPage = () => {
         </div>
 
         <div className="relative flex items-end">
-          <div className="w-full rounded-[2rem] border border-white/60 bg-white/72 p-5 shadow-[0_24px_80px_rgba(33,51,53,0.14)] backdrop-blur-md">
+          <div className="w-full rounded-[2rem] border border-[var(--portfolio-line)] bg-[var(--portfolio-card)] p-5 shadow-[0_24px_80px_var(--portfolio-shadow)] backdrop-blur-md">
             <div className="mb-10 space-y-4">
               <div className="flex items-center justify-between">
                 <p className={sectionTitleClass}>Signal</p>
@@ -123,7 +122,7 @@ export const PortfolioPage = () => {
                 {highlights.map((item) => (
                   <div
                     key={item.label}
-                    className="rounded-[1.5rem] border border-[var(--portfolio-line)] bg-[rgba(255,255,255,0.78)] p-4"
+                    className="rounded-[1.5rem] border border-[var(--portfolio-line)] bg-[var(--portfolio-panel)] p-4"
                   >
                     <p className="text-xs tracking-[0.18em] text-[var(--portfolio-muted)] uppercase">
                       {item.label}
@@ -159,7 +158,7 @@ export const PortfolioPage = () => {
         </div>
       </section>
 
-      <section className="relative border-y border-[var(--portfolio-line)] bg-white/60 px-6 py-8 sm:px-10 lg:px-14">
+      <section className="relative border-y border-[var(--portfolio-line)] bg-[var(--portfolio-panel)] px-6 py-8 sm:px-10 lg:px-14">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <p className="text-4xl font-semibold tracking-[-0.06em]">{profile.yearsOfExperience}</p>
@@ -207,7 +206,7 @@ export const PortfolioPage = () => {
           {experiences.map((experience) => (
             <article
               key={`${experience.company}-${experience.period}`}
-              className="grid gap-5 rounded-[1.75rem] border border-[var(--portfolio-line)] bg-white/70 p-6 shadow-[0_14px_50px_rgba(22,44,46,0.08)] lg:grid-cols-[10rem_1fr]"
+              className="grid gap-5 rounded-[1.75rem] border border-[var(--portfolio-line)] bg-[var(--portfolio-card)] p-6 shadow-[0_14px_50px_var(--portfolio-shadow)] lg:grid-cols-[10rem_1fr]"
             >
               <div>
                 <p className="text-xs tracking-[0.18em] text-[var(--portfolio-muted)] uppercase">
@@ -291,7 +290,7 @@ export const PortfolioPage = () => {
           {skills.map((group) => (
             <div
               key={group.title}
-              className="rounded-[1.75rem] border border-[var(--portfolio-line)] bg-[rgba(255,255,255,0.78)] p-6"
+              className="rounded-[1.75rem] border border-[var(--portfolio-line)] bg-[var(--portfolio-card)] p-6"
             >
               <p className="text-xs tracking-[0.18em] text-[var(--portfolio-muted)] uppercase">
                 {group.title}
@@ -311,27 +310,9 @@ export const PortfolioPage = () => {
         </div>
       </section>
 
-      <section className="relative border-t border-[var(--portfolio-line)] bg-[rgba(255,255,255,0.78)] px-6 py-16 sm:px-10 lg:px-14 lg:py-20">
-        <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr]">
-          <div className="space-y-4">
-            <p className={sectionTitleClass}>Engineering Signal</p>
-            <h2 className="text-3xl font-semibold tracking-[-0.05em] sm:text-4xl">
-              Frontend systems, not just polished screens.
-            </h2>
-            <p className="max-w-md text-base leading-7 text-[var(--portfolio-muted)]">
-              This demo module shows the way I structure production-minded frontend work: mock
-              service boundaries, Zustand-driven state flow, async behaviors, and UI states for
-              loading, empty, and error handling.
-            </p>
-          </div>
-
-          <TodoList />
-        </div>
-      </section>
-
       <section
         id="contact"
-        className="relative grid gap-10 border-t border-[var(--portfolio-line)] bg-white/68 px-6 py-16 sm:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:px-14 lg:py-20"
+        className="relative grid gap-10 border-t border-[var(--portfolio-line)] bg-[var(--portfolio-panel)] px-6 py-16 sm:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:px-14 lg:py-20"
       >
         <div className="space-y-4">
           <p className={sectionTitleClass}>Education</p>

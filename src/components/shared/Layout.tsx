@@ -12,35 +12,38 @@ export const Layout = () => {
   const resumeUrl = `${import.meta.env.BASE_URL}Nguyen-Duc-Nam-FRONEND_DEV.pdf`;
 
   return (
-    <div className="min-h-screen bg-[#efe5d7] text-foreground transition-colors duration-300">
-      <header className="sticky top-0 z-50 w-full border-b border-black/6 bg-[#efe5d7]/88 backdrop-blur-xl">
+    <div className="min-h-screen bg-[var(--portfolio-shell)] text-foreground transition-colors duration-300">
+      <header className="sticky top-0 z-50 w-full border-b border-[var(--portfolio-line)] bg-[var(--portfolio-shell)]/88 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
-          <Link to="/" className="text-sm font-semibold tracking-[0.3em] text-[#183a3d] uppercase">
+          <Link
+            to="/"
+            className="text-sm font-semibold tracking-[0.3em] text-[var(--portfolio-ink)] uppercase"
+          >
             Nguyen Duc Nam
           </Link>
 
           <nav className="hidden items-center gap-1 md:flex">
             <a
               href="#experience"
-              className="rounded-full px-3 py-2 text-sm text-[#37585a] transition-colors hover:text-[#183a3d]"
+              className="rounded-full px-3 py-2 text-sm text-[var(--portfolio-muted)] transition-colors hover:text-[var(--portfolio-ink)]"
             >
               Experience
             </a>
             <a
               href="#project"
-              className="rounded-full px-3 py-2 text-sm text-[#37585a] transition-colors hover:text-[#183a3d]"
+              className="rounded-full px-3 py-2 text-sm text-[var(--portfolio-muted)] transition-colors hover:text-[var(--portfolio-ink)]"
             >
               Project
             </a>
             <a
               href="#skills"
-              className="rounded-full px-3 py-2 text-sm text-[#37585a] transition-colors hover:text-[#183a3d]"
+              className="rounded-full px-3 py-2 text-sm text-[var(--portfolio-muted)] transition-colors hover:text-[var(--portfolio-ink)]"
             >
               Skills
             </a>
             <a
               href="#contact"
-              className="rounded-full px-3 py-2 text-sm text-[#37585a] transition-colors hover:text-[#183a3d]"
+              className="rounded-full px-3 py-2 text-sm text-[var(--portfolio-muted)] transition-colors hover:text-[var(--portfolio-ink)]"
             >
               Contact
             </a>
@@ -51,7 +54,7 @@ export const Layout = () => {
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="rounded-full text-[#183a3d] hover:bg-white/60 hover:text-[#183a3d]"
+              className="rounded-full text-[var(--portfolio-ink)] hover:bg-[var(--portfolio-card)] hover:text-[var(--portfolio-ink)]"
               aria-label="Toggle theme"
             >
               {theme === 'light' ? (
@@ -61,7 +64,7 @@ export const Layout = () => {
               )}
             </Button>
             <a href={resumeUrl} target="_blank" rel="noreferrer">
-              <Button className="hidden rounded-full bg-[#183a3d] px-5 text-[#f8f1e7] hover:bg-[#183a3d]/92 sm:inline-flex">
+              <Button className="hidden rounded-full bg-[var(--portfolio-ink)] px-5 text-[var(--portfolio-surface)] hover:opacity-92 sm:inline-flex">
                 Resume
               </Button>
             </a>

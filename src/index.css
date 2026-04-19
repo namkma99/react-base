@@ -46,6 +46,20 @@
   --portfolio-accent: #d26d3b;
   --portfolio-line: rgba(23, 51, 54, 0.12);
   --portfolio-soft: #ead8c4;
+  --portfolio-shell: #efe5d7;
+  --portfolio-card: rgba(255, 255, 255, 0.72);
+  --portfolio-panel: rgba(255, 255, 255, 0.62);
+  --portfolio-ring: rgba(0, 0, 0, 0.05);
+  --portfolio-shadow: rgba(18, 38, 40, 0.14);
+  --portfolio-hero:
+    radial-gradient(circle at top left, rgba(246, 151, 95, 0.24), transparent 34%),
+    radial-gradient(circle at 80% 20%, rgba(56, 122, 118, 0.22), transparent 28%),
+    linear-gradient(180deg, rgba(250, 244, 235, 0.96), rgba(244, 236, 225, 0.92));
+  --portfolio-side-glow: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.62),
+    transparent 55%
+  );
 
   /* Font rendering */
   font-synthesis: none;
@@ -137,6 +151,20 @@
   --portfolio-accent: #f2a06b;
   --portfolio-line: rgba(255, 255, 255, 0.1);
   --portfolio-soft: #203638;
+  --portfolio-shell: #0b1415;
+  --portfolio-card: rgba(19, 35, 37, 0.84);
+  --portfolio-panel: rgba(16, 29, 31, 0.78);
+  --portfolio-ring: rgba(255, 255, 255, 0.05);
+  --portfolio-shadow: rgba(0, 0, 0, 0.34);
+  --portfolio-hero:
+    radial-gradient(circle at top left, rgba(242, 160, 107, 0.12), transparent 34%),
+    radial-gradient(circle at 80% 20%, rgba(88, 162, 154, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(15, 30, 32, 0.96), rgba(12, 23, 25, 0.98));
+  --portfolio-side-glow: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.04),
+    transparent 55%
+  );
 }
 
 /* ── Base styles ─────────────────────────────────────────────────────────── */
