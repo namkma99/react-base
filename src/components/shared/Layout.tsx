@@ -1,65 +1,74 @@
 import { Link, Outlet } from 'react-router-dom';
+import { MoonStar, SunMedium } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useAppStore } from '@/stores/use-app-store';
-import { useLogout } from '@/features/auth';
 
 /**
- * Root layout — wraps all authenticated app pages.
- * Provides the global header and main container.
- * Add persistent UI elements (nav, footer, sidebar) here.
- *
- * Dark mode is synced globally in AppProvider (ThemeSyncer), not here.
- * Uses Zustand selectors to avoid unnecessary re-renders.
+ * Root layout for the portfolio site.
  */
 export const Layout = () => {
   const theme = useAppStore((state) => state.theme);
   const toggleTheme = useAppStore((state) => state.toggleTheme);
-  const user = useAppStore((state) => state.user);
-  const logout = useLogout();
 
   return (
-    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
-      {/* Global Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-sm">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <Link
-            to="/"
-            className="text-xl font-bold tracking-tight transition-opacity hover:opacity-80"
-          >
-            Workspace
+    <div className="min-h-screen bg-[#efe5d7] text-foreground transition-colors duration-300">
+      <header className="sticky top-0 z-50 w-full border-b border-black/6 bg-[#efe5d7]/88 backdrop-blur-xl">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
+          <Link to="/" className="text-sm font-semibold tracking-[0.3em] text-[#183a3d] uppercase">
+            Nguyen Duc Nam
           </Link>
 
-          <nav className="flex items-center gap-2">
+          <nav className="hidden items-center gap-1 md:flex">
+            <a
+              href="#experience"
+              className="rounded-full px-3 py-2 text-sm text-[#37585a] transition-colors hover:text-[#183a3d]"
+            >
+              Experience
+            </a>
+            <a
+              href="#project"
+              className="rounded-full px-3 py-2 text-sm text-[#37585a] transition-colors hover:text-[#183a3d]"
+            >
+              Project
+            </a>
+            <a
+              href="#skills"
+              className="rounded-full px-3 py-2 text-sm text-[#37585a] transition-colors hover:text-[#183a3d]"
+            >
+              Skills
+            </a>
+            <a
+              href="#contact"
+              className="rounded-full px-3 py-2 text-sm text-[#37585a] transition-colors hover:text-[#183a3d]"
+            >
+              Contact
+            </a>
+          </nav>
+
+          <div className="flex items-center gap-2">
             <Button
               variant="ghost"
               size="icon"
               onClick={toggleTheme}
-              className="rounded-full"
+              className="rounded-full text-[#183a3d] hover:bg-white/60 hover:text-[#183a3d]"
               aria-label="Toggle theme"
             >
-              {theme === 'light' ? '🌙' : '☀️'}
+              {theme === 'light' ? (
+                <MoonStar className="h-4 w-4" />
+              ) : (
+                <SunMedium className="h-4 w-4" />
+              )}
             </Button>
-
-            {user ? (
-              <Button
-                variant="outline"
-                size="sm"
-                disabled={logout.isPending}
-                onClick={() => logout.mutate()}
-              >
-                Logout
+            <a href="/Nguyen-Duc-Nam-FRONEND_DEV.pdf" target="_blank" rel="noreferrer">
+              <Button className="hidden rounded-full bg-[#183a3d] px-5 text-[#f8f1e7] hover:bg-[#183a3d]/92 sm:inline-flex">
+                Resume
               </Button>
-            ) : (
-              <Link to="/login">
-                <Button size="sm">Sign in</Button>
-              </Link>
-            )}
-          </nav>
+            </a>
+          </div>
         </div>
       </header>
 
-      {/* Page content */}
-      <main className="container mx-auto px-4 py-10">
+      <main className="mx-auto max-w-7xl px-4 py-6 sm:px-6 sm:py-8">
         <Outlet />
       </main>
     </div>
