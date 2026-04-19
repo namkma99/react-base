@@ -7,4 +7,7 @@ export type Todo = {
   id: number;
   title: string;
   completed: boolean;
+  status?: 'todo' | 'in_progress' | 'done';
+  priority?: 'low' | 'medium' | 'high';
+  project?: string;
 };

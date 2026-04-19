@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { TodoList } from '@/features/todo';
 import { education, experiences, featuredProject, highlights, profile, skills } from './content';
 
 const sectionTitleClass =
@@ -307,6 +308,24 @@ export const PortfolioPage = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="relative border-t border-[var(--portfolio-line)] bg-[rgba(255,255,255,0.78)] px-6 py-16 sm:px-10 lg:px-14 lg:py-20">
+        <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr]">
+          <div className="space-y-4">
+            <p className={sectionTitleClass}>Engineering Signal</p>
+            <h2 className="text-3xl font-semibold tracking-[-0.05em] sm:text-4xl">
+              Frontend systems, not just polished screens.
+            </h2>
+            <p className="max-w-md text-base leading-7 text-[var(--portfolio-muted)]">
+              This demo module shows the way I structure production-minded frontend work: mock
+              service boundaries, Zustand-driven state flow, async behaviors, and UI states for
+              loading, empty, and error handling.
+            </p>
+          </div>
+
+          <TodoList />
         </div>
       </section>
 
