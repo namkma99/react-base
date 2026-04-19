@@ -70,7 +70,8 @@
 
 /* ── Tailwind theme mapping ───────────────────────────────────────────────── */
 @theme inline {
-  --font-heading: var(--font-sans);
+  --font-display: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  --font-heading: var(--font-display);
   --font-sans: 'Geist Variable', sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -156,6 +157,7 @@
   --portfolio-panel: rgba(16, 29, 31, 0.78);
   --portfolio-ring: rgba(255, 255, 255, 0.05);
   --portfolio-shadow: rgba(0, 0, 0, 0.34);
+  --portfolio-watermark: rgba(255, 255, 255, 0.035);
   --portfolio-hero:
     radial-gradient(circle at top left, rgba(242, 160, 107, 0.12), transparent 34%),
     radial-gradient(circle at 80% 20%, rgba(88, 162, 154, 0.12), transparent 28%),
